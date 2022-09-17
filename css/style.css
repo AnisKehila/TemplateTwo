@@ -1,0 +1,207 @@
+:root {
+    --main-color: #19c8fa;
+    --transparent-color: rgb(15 116 143 / 70%);
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Small screen */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium screen */
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large screen */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Start header style */
+header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 98px;
+}
+header .container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: #a2a2a2;
+}
+header  nav {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+header nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    header  nav ul li { 
+        display: none;
+    }
+}
+header  nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 40px 10px;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s;
+}
+header nav .toggle-menu {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    header  nav .toggle-menu { 
+        display: block;
+    }
+}
+header  nav .search {
+    margin-left: 30px;
+    font-size: 20px;
+    border-left: white 1px solid;
+    padding: 6px 0px 6px 22px;
+}
+header nav .search i {
+    cursor: pointer;
+}
+
+header nav ul li a.active,
+header  nav ul li a:hover {
+    color: var(--main-color);
+    border-bottom: #19c8fa solid 1px;
+
+}
+/* End header style */
+/* Start landing style */
+.landing {
+    background-image: url(../images/landing.jpg);
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.6) ;
+}
+.landing .content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 50%;
+    transform: translateY(-50%);
+    background-color: var(--transparent-color);
+    color: white;
+    padding: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+.landing .content .txt {
+    width: 60%;
+}
+@media (max-width: 1200px) {
+    .landing .content .txt {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .landing .content .txt {
+        width: 100%;
+    }
+    .landing .content {
+        width: 100%;
+    }
+}
+
+
+.landing .content .txt h2 {
+    font-size: 38px;
+    font-weight: normal;
+    line-height: 1.6;
+}
+.landing .content .txt p {
+    font-size: 14px;
+    line-height: 2;
+}
+.landing i {
+    position: absolute;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+}
+.landing #right {
+    left: 96%;
+}
+.landing #left {
+    right: 96%;
+}
+.bullets {
+    position: absolute;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    z-index: 2;
+    display: flex;
+    list-style: none;
+}
+.bullets li {
+    border: 1px solid white;
+    width: 18px;
+    height: 18px;
+    margin-left: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.bullets li.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+/* End landing style */
