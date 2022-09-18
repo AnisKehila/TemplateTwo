@@ -278,7 +278,7 @@ header  nav ul li a:hover {
 .design {
     height: 600px;
     overflow: hidden;
-    background-image: url("/images/design-features.jpg");
+    background-image: url("../images/design-features.jpg");
     background-size: cover;
     position: relative;
 }
