@@ -278,7 +278,7 @@ header  nav ul li a:hover {
 .design {
     height: 600px;
     overflow: hidden;
-    background-image: url("/images/design-features.jpg");
+    background-image: url("../images/design-features.jpg");
     background-size: cover;
     position: relative;
 }
@@ -324,3 +324,84 @@ header  nav ul li a:hover {
     }
 }
 /* End design style */
+/* Start portfolio style */
+.portfolio {
+    padding-top:var(--section-padding) ;
+    padding-bottom:var(--section-padding) ;
+}
+.portfolio .filter ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.portfolio .filter ul li{
+    margin-right: 16px;
+    cursor: pointer;
+    padding: 12px 14px;
+}
+.portfolio .filter ul li.active {
+    background-color: #19c8fa;
+    color: white;
+    cursor: default ;
+}
+.portfolio .filter ul li:hover {
+    background-color: #19c8fa;
+    color: white;
+}
+.portfolio .imgs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+}
+.portfolio .imgs .box {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio .imgs .box .details {
+    position: absolute;
+    bottom: -100%;
+    transition: .4s;
+    background-color: #fff;
+    width: 100%;
+    padding: 18px;
+}
+.portfolio .imgs .box .details h3 {
+    font-weight: normal;
+    margin-bottom: 14px;
+}
+.portfolio .imgs .box .details p {
+    color: var(--main-color);
+}
+.portfolio .imgs .box:hover .details {
+    bottom: 0;
+}
+
+@media(min-width : 768px) {
+    .portfolio .imgs .box {
+        flex-basis: 50%;
+    }
+}
+@media(min-width : 1200px) {
+    .portfolio .imgs .box {
+        flex-basis: 25%;
+    }
+}
+.portfolio .imgs .box img {
+    max-width: 100%;
+    transition: .4s;
+}
+.portfolio .imgs .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+} 
+.portfolio a {
+    color: #fff;
+    background-color: var(--main-color);
+    padding: 18px 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 30px auto;
+    display: block;
+    width: fit-content;
+}
+/* END portfolio style */
