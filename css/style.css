@@ -324,6 +324,7 @@ header  nav ul li a:hover {
     }
 }
 /* End design style */
+<<<<<<< HEAD
 /* Start portfolio style */
 .portfolio {
     padding-top:var(--section-padding) ;
@@ -405,3 +406,5 @@ header  nav ul li a:hover {
     width: fit-content;
 }
 /* END portfolio style */
+=======
+>>>>>>> 1bd17a63f45d7e289df3c342580f8a6d7a5e1f1e
