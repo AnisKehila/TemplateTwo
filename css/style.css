@@ -230,7 +230,7 @@ header  nav ul li a:hover {
         display: none;
     }
 }
-.bullets {
+.landing .bullets {
     position: absolute;
     color: white;
     left: 50%;
@@ -240,7 +240,7 @@ header  nav ul li a:hover {
     display: flex;
     list-style: none;
 }
-.bullets li {
+.landing  .bullets li {
     border: 1px solid white;
     width: 18px;
     height: 18px;
@@ -248,7 +248,7 @@ header  nav ul li a:hover {
     border-radius: 50%;
     cursor: pointer;
 }
-.bullets li.active {
+.landing .bullets li.active {
     background-color: var(--main-color);
     border-color: var(--main-color);
 }
@@ -553,3 +553,147 @@ header  nav ul li a:hover {
     margin-bottom: 18px;
 }
 /* END states style */
+/* Start testimonials & skills style */
+.testi-skills {
+    padding-top:var(--section-padding) ;
+    padding-bottom:var(--section-padding) ;
+}
+.testi-skills .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.testi-skills h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.testi-skills h3+p {
+    margin-bottom: 52px;
+    text-align: center;
+    color: #777;
+}
+
+.testi-skills .testi .content .box .txt p:first-child {
+    margin-bottom: 12px;
+}
+.testi-skills .testi .content .box .txt p:nth-child(2) {
+    color: #777;
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.testi-skills .testi .content .box .txt {
+    line-height: 1.6;
+    border-bottom: #ccc solid 1px;
+}
+.testi-skills .testi .content .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.testi-skills .testi .content .box img {
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+.testi .bullets {
+    color: white;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+
+}
+.testi  .bullets li {
+    border: 1px solid black;
+    width: 14px;
+    height: 14px;
+    margin-left: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.testi .bullets li.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+.skills .progress-bars .skill {
+    margin-bottom: 28px;
+}
+.skills .progress-bars .txt {
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.skills .progress-bars .bar {
+    height: 34px;
+    background-color: #dedadc;
+}
+.skills .progress-bars .bar .progress{
+    height: 100%;
+    background-color: var(--main-color);
+    position: relative;
+}
+.skills .progress-bars .bar .progress::before{
+    content: "";
+    position: absolute;
+
+    top: -40%;
+    right: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: black transparent transparent;
+}
+.skills .progress-bars .bar .progress::after{
+    content: attr(data-progress);
+    position: absolute;
+    top: -100%;
+    right: -13px;
+    color: white;
+    background-color: black;
+    padding: 2.4px 3px;
+    border-radius: 2px;
+}
+.testi-skills .testi,
+.testi-skills .skills {
+    flex-basis: 45%;
+}
+@media(max-width : 999px) {
+    .testi-skills .testi,
+    .testi-skills .skills {
+        flex-basis: 80%;
+        margin: auto;
+    }
+    .testi-skills .skills {
+        padding-top: 50px;
+    }
+}
+/* END testimonials & skills style */
+/* Start quote style */
+.quote {
+    padding-top:var(--section-padding) ;
+    padding-bottom:var(--section-padding) ;
+    background-image: url(../images/quote.jpg);
+    position: relative;
+    background-size: cover;
+}
+.quote::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.quote .container {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+}
+.quote q {
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: block;
+}
+/* END quote style */
