@@ -117,11 +117,7 @@ header nav ul {
     list-style: none;
     font-size: 14px;
 }
-@media (max-width: 768px) {
-    header  nav ul li { 
-        display: none;
-    }
-}
+
 header  nav ul li a {
     text-decoration: none;
     color: white;
@@ -131,14 +127,58 @@ header  nav ul li a {
     z-index: 2;
     transition: 0.4s;
 }
-header nav .toggle-menu {
+header nav .menu {
+    position: relative;
+}
+header nav .menu ul{
+    display: none;
+}
+header nav .menu .toggle-menu {
     display: none;
     font-size: 20px;
     cursor: pointer;
 }
+
+
 @media (max-width: 768px) {
-    header  nav .toggle-menu { 
+    header  nav .menu .toggle-menu { 
         display: block;
+    }
+    header nav .menu ul{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 210px;
+        top: 170%;
+        /* right: -128%; */
+        left: -121px;
+        background-color: #0000005e;
+        text-align: center;
+        z-index: 1;
+        display: none;
+    }
+    header nav .menu ul::before {
+        content: '';
+        position: relative;
+        border-color: transparent transparent #0000005e transparent;
+        border-style: solid;
+        border-width: 10px;
+        bottom: 27px;
+        left: 11%;
+    }
+    header  nav .menu ul li a {
+        display: block;
+        padding: 18px 10px;
+        z-index: 2;
+        transition: 0.4s;
+    }
+    header nav ul {
+        display: none;
+    }
+}
+@media (max-width: 350px) {
+    header  nav {
+        max-width: 100%;
     }
 }
 header  nav .search {
@@ -146,11 +186,18 @@ header  nav .search {
     font-size: 20px;
     border-left: white 1px solid;
     padding: 6px 0px 6px 22px;
+    position: relative;
+    overflow: hidden;
 }
 header nav .search i {
     cursor: pointer;
-}
+    transition: .4s;
 
+}
+header nav .search input{
+    position: absolute;
+    transition: .4s;
+}
 header nav ul li a.active,
 header  nav ul li a:hover {
     color: var(--main-color);
@@ -199,7 +246,12 @@ header  nav ul li a:hover {
         width: 100%;
     }
 }
-
+@media (max-width: 350px) {
+    .landing .content {
+        padding: 18px 0 20px 0;
+        text-align: center;
+    }
+}
 
 .landing .content .txt h2 {
     font-size: 38px;
